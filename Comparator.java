@@ -16,9 +16,6 @@ public class Comparator {
         int thirdNumber = enterNumber();
         int fourthNumber = enterNumber();
 
-        boolean trueStatement = true;
-        boolean falseStatement = false;
-
         // Sum pairs of numbers
         int firstPairSum = firstNumber + secondNumber;
         System.out.println(firstPairSum);
@@ -27,26 +24,20 @@ public class Comparator {
         System.out.println(secondPairSum);
 
         // Compare sums first time
-        if(firstPairSum < secondPairSum) {
-            System.out.println(trueStatement);
-        }
+
+        System.out.println(firstPairSum < secondPairSum);
 
         // Change sums
-        int changedFirstPairSum = firstPairSum+=1;
-        System.out.println(changedFirstPairSum);
-        int changedSecondPairSum = secondPairSum-=2;
-        System.out.println(changedSecondPairSum);
+        firstPairSum += 1;
+        System.out.println(firstPairSum);
+
+        secondPairSum -= 2;
+        System.out.println(secondPairSum);
 
         // Compare sums second time
-        if (changedFirstPairSum > changedSecondPairSum) {
-            System.out.println(trueStatement);
-        }
+        System.out.println(firstPairSum > secondPairSum);
 
         // Check if sum is even
-        if (changedFirstPairSum%2 == 0 || changedSecondPairSum%2 == 0) {
-            System.out.println(trueStatement);
-        } else {
-            System.out.println(falseStatement);
-        }
+        System.out.println(firstPairSum % 2 == 0 || secondPairSum % 2 == 0);
     }
 }
